@@ -1,4 +1,4 @@
-package com.loveable.restfulwebservices.services.core.users;
+package com.loveable.restfulwebservices.services.users;
 
 import com.loveable.restfulwebservices.dtos.UserDto;
 

@@ -30,6 +30,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return handleException(exception, webRequest, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(UserAlreadyExistException.class)
+    public final ResponseEntity<Object> handleUserAlreadyExistException(UserAlreadyExistException exception, WebRequest webRequest) {
+        return handleException(exception, webRequest, HttpStatus.CONFLICT);
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException exception, HttpHeaders headers, HttpStatusCode status, WebRequest webRequest) {
 

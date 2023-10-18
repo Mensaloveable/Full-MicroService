@@ -1,7 +1,7 @@
 package com.loveable.restfulwebservices.controller;
 
 import com.loveable.restfulwebservices.dtos.UserDto;
-import com.loveable.restfulwebservices.services.core.users.UsersServices;
+import com.loveable.restfulwebservices.services.users.UsersServices;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
