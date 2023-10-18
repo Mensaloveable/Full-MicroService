@@ -25,13 +25,13 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return handleException(exception, webRequest, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(UserNotFoundException.class)
-    public final ResponseEntity<Object> handleUserNotFoundException(UserNotFoundException exception, WebRequest webRequest) {
+    @ExceptionHandler(InstanceNotFoundException.class)
+    public final ResponseEntity<Object> handleUserNotFoundException(InstanceNotFoundException exception, WebRequest webRequest) {
         return handleException(exception, webRequest, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(UserAlreadyExistException.class)
-    public final ResponseEntity<Object> handleUserAlreadyExistException(UserAlreadyExistException exception, WebRequest webRequest) {
+    @ExceptionHandler(InstanceAlreadyExistException.class)
+    public final ResponseEntity<Object> handleUserAlreadyExistException(InstanceAlreadyExistException exception, WebRequest webRequest) {
         return handleException(exception, webRequest, HttpStatus.CONFLICT);
     }
 
